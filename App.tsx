@@ -3,6 +3,7 @@ import { NewAppScreen } from '@react-native/new-app-screen';
 import { SafeAreaView, StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import Home from './Components/Home';
 import Login from './Components/Login';
+import SignUp from './Components/SignUp';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Login />
+      <SignUp />
     </SafeAreaView>
   );
 }

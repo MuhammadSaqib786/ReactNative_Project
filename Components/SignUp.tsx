@@ -8,11 +8,11 @@ import {
   View,
 } from 'react-native';
 
-function Login() {
+function SignUp() {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcomeText}>Welcome,</Text>
-      <Text style={styles.gladText}>Glad to see you!</Text>
+      <Text style={styles.welcomeText}>Creat Account</Text>
+      <Text style={styles.gladText}>to get started now!</Text>
       <TextInput
         placeholder="Email Address"
         placeholderTextColor="#ffffff"
@@ -24,15 +24,19 @@ function Login() {
         secureTextEntry
         style={styles.input}
       />
-
-      <Text style={styles.forgotPasswordText}>Forget Password?</Text>
+      <TextInput
+        placeholder="Confirm Password"
+        placeholderTextColor="#ffffff"
+        secureTextEntry
+        style={styles.input}
+      />
 
       <TouchableOpacity>
-        <Text style={styles.buttonText}>Login</Text>
+        <Text style={styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
 
       <Text style={styles.orLoginWithText}>
-        ........................... Or Login with ...........................
+        ........................... Or SignUp with ...........................
       </Text>
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: '90%', alignSelf: 'center', marginTop: 20 }}>
             <TouchableOpacity style={{ backgroundColor: '#ffffff', borderRadius: 8, width: '45%', alignItems: 'center', padding: 12 }}>
@@ -49,7 +53,7 @@ function Login() {
             </TouchableOpacity>
         </View>
 
-        <Text style={styles.dontHaveAccount}>Don't have an account? <Text style={{ color: '#ffffff', fontWeight: 'bold' }}>Sign Up Now</Text></Text>
+        <Text style={styles.dontHaveAccount}>Already have an account? <Text style={{ color: '#ffffff', fontWeight: 'bold' }}>Login Now</Text></Text>
     </View>
   );
 }
@@ -85,14 +89,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffffff',
   },
-  forgotPasswordText: {
-    fontSize: 16,
-    color: '#ffffff',
-    marginRight: 10,
-    marginLeft: 'auto',
-    marginTop: 20,
-    fontWeight: 'bold',
-  },
   buttonText: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -122,4 +118,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default SignUp;
