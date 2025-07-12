@@ -1,8 +1,8 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
-function Home() {
-  
+function Home({ navigation } : any) {
+
 
   return (
     <View style={styles.container}>
@@ -11,10 +11,10 @@ function Home() {
       />
       <Text style={styles.text}>PixedlPro Digital</Text>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
         <Text style={styles.signUp}>SignUp</Text>
       </TouchableOpacity>
       <Text style={styles.bottomText}>Continue as a guest</Text>
@@ -26,10 +26,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignContent: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: '#B9A4FF',
   },
   logo: {
-    marginTop: 150,
+    marginTop: 50,
     width: 150,
     height: 150,
     resizeMode: "contain",

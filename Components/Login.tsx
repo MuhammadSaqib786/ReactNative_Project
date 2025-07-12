@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 
-function Login() {
+function Login({ navigation }: any) {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Welcome,</Text>
@@ -27,7 +27,7 @@ function Login() {
 
       <Text style={styles.forgotPasswordText}>Forget Password?</Text>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=> navigation.replace('Dashboard')}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 
@@ -49,7 +49,11 @@ function Login() {
             </TouchableOpacity>
         </View>
 
-        <Text style={styles.dontHaveAccount}>Don't have an account? <Text style={{ color: '#ffffff', fontWeight: 'bold' }}>Sign Up Now</Text></Text>
+        <Text style={styles.dontHaveAccount}>Don't have an account? 
+            <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+                <Text style={{ color: '#ffffff', fontWeight: 'bold' }}>Sign Up Now</Text>
+            </TouchableOpacity>
+             </Text>
     </View>
   );
 }
@@ -59,7 +63,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignContent: 'center',
     justifyContent: 'center',
-    marginTop: 100,
+    backgroundColor: '#B9A4FF',
+    paddingTop: 100
   },
   welcomeText: {
     fontSize: 34,
